@@ -11,6 +11,38 @@ This project follows a simple release-note style:
 
 ## Unreleased
 
+### Fixed
+
+- Removed BasicPitch from declared optional extras and documented it as a manual integration so Dependabot can patch vulnerable TensorFlow/Keras/protobuf transitive dependencies instead of resolving an unsafe pinned stack.
+
+## 1.5.1 - 2026-06-04
+
+### Fixed
+
+- Removed the unpublished `meltysynth` dependency from optional audio extras so Glama, uv, and package metadata validators can resolve the project.
+- Updated the repository readiness audit after the intentionally removed `/explainer-video` npm Dependabot entry.
+
+## 1.5.0 - 2026-06-04
+
+### Added
+
+- Added Video Receipt documentation for agent-created media review trails.
+- Added receipt-backed confidence baseline workflow with quality report, release checkpoint, storyboard, thumbnail, and pending human-review status.
+- Added local repurpose-package workflow for platform variants with manifest, review artifacts, checkpoints, and receipt output.
+- Added confidence benchmark and adversarial certification scripts for local readiness proof.
+- Added dated proof notes for fresh install confidence, public issue triage, agentic media readiness, and external feedback asks.
+
+### Changed
+
+- Hardened the explainer workflow into a 10-stage receipt-producing lane with transition audit records, audio normalization, quality report, and a real `min_score=50` release checkpoint.
+- Updated workflow routing docs and golden workflow map around the confidence proof lanes.
+
+### Fixed
+
+- Removed the stale Dependabot `/explainer-video` npm configuration entry so dependency automation can run against real package paths.
+- Made corrupted media probing fail as `InputFileError`, giving adversarial checks a clear invalid-input signal.
+- Fixed the confidence benchmark so stale receipts cannot hide a failed workflow run.
+
 ## 1.4.1 - 2026-05-25
 
 ### Added
