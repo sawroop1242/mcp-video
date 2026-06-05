@@ -1,15 +1,13 @@
+
 {
-  "name": "mcp-video",
+  "name": "mcp-video-server",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "22"
-    },
-    "ghcr.io/devcontainers/features/python:1": {
-      "version": "3.12"
-    }
+    "ghcr.io/devcontainers/features/sshd:1": {},
+    "ghcr.io/devcontainers/features/node:1": { "version": "22" },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.12" }
   },
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg && curl -LsSf https://astral.sh/uv/install.sh | sh",
   "forwardPorts": [8000],
   "portsAttributes": {
     "8000": {
